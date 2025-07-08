@@ -1,0 +1,11 @@
+#gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    max-height: 1600px;
+}
+
+button {
+    margin: 10px;
+
+}
