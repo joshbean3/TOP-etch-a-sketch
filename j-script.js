@@ -22,8 +22,17 @@ function createGrid(squares) {
         newDiv.style.height = `${1600 / squares}px`;
         newDiv.style.width = `${1600 / squares}px`;
         newDiv.addEventListener("mouseover", function() {
-            newDiv.style.backgroundColor = "green";
+            // Get random numbers for RGB values
+            const random_red = getRandomArbitrary(0,255);
+            const random_blue = getRandomArbitrary(0,255);
+            const random_green = getRandomArbitrary(0,255);
+            // Apply RGB values to background color for squares
+            newDiv.style.backgroundColor = `rgb(${random_red},${random_blue},${random_green})`;
         })
         gridContainer.appendChild(newDiv);
     }
+}
+// get random number between two values 
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
 }
